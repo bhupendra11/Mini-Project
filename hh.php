@@ -30,67 +30,6 @@ My mp project
 	<div class="tfclear"></div>
 </div>
 
-<div>
-
-<table class="tbl">
-<tr width="100%">
-<td width="20%" style="background-color:#c3dfef;" >
-
-<center>
-<ul style="text-align:left;">
-<li><a href="question.html">Post Questions</a></li>
-<li><a href="answer.php">Post Answer</a></li>
-<li><a href="preview.php">Preview Question and Answer post!!</a></li>
-
-</ul>
-</center>
-
-
-</td>
-<td width="60%">
-
-
-
-
-
-<?php include 'recentpost.php';?>
-
-
-
-
-
-</td>
-
-<td width="20%" style="background-color:#c3dfef;">
-
-
-
-
-</td>
-</tr>
-
-
-
-
-
-</table>
-
-
-
-
-
-
-
-
-</div>
-	
-	
-    
-	
-	<div id="footer1" style="clear:both;">
-	  <center> <B>CONTACT US</B></center>
-	  
-	</div>
 
 </body>
 </html>

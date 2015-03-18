@@ -17,7 +17,7 @@ if ($conn->connect_error) {
    if($name!="" && $email!="" && $password!="")
    {
 $sql = "INSERT INTO user (user_name,password,email) VALUES( '$name','$password','$email')";
-$status=mysql_query($sql,$conn);       
+$status=mysql_query($sql);       
 if ($conn->query($sql) === TRUE) {
 
 echo "You are registered successfully!";

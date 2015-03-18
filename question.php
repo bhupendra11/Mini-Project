@@ -27,7 +27,7 @@ echo "failed in posting";
 }
 else
 {
-echo "fill all the credential!!";
+echo "Please write your Question to post!!";
 }
 
 

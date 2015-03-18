@@ -15,7 +15,7 @@ border-radius:12px;
 background-color:white;
 font-size:20px;
 color:black;
-text-align:center;
+text-align:left;
 }
 .ans 
 {
@@ -38,16 +38,11 @@ color:blue;
 <div id="navbar">
 
 <ul>
-<li><a href="index.php"> Go Home</a></li>
 <li class="nohover"><a href="index.php" ><img src="images\logo.jpg" style=""></img></a></li>
-
 <li><a> NOTIFICATION</a></li>
 <li><a> CONTACT US</a></li>
 <li><a href="login.html"> LOGIN</a></li>
-<li><a href="registration.php">SIGN UP</a></li>
-
-
-
+<li><a href="register.html">SIGN UP</a></li>
 </ul>
 </div>
 <div id="tfheader">
@@ -124,15 +119,15 @@ error_reporting(E_ALL & ~ E_NOTICE & ~ E_WARNING & ~E_DEPRECATED);
 					$qq="select user_name from user where user_id='$userid'";
 					$rr=mysql_query($qq);
 					$res2=mysql_fetch_array($rr);
-					echo htmlentities($question_found['question'])."</td><td class='post_date'>Posted @ ".($question_found['question_post_date'])." By:<b>".($res2[0])."</b></td>";
+					echo htmlentities("Que..     ".$question_found['question'])."</td><td class='post_date'>Posted @ ".($question_found['question_post_date'])." By:<b>".($res2[0])."</b></td>";
 					
-					echo "</tr></table></center>";
+					echo "<hr></tr></table></center>";
 					$answer_query = "select * from tb_answer where question_id='{$sorted[$j]}'";
 					$answer_result_set = mysql_query($answer_query);
 					while($answer_found = mysql_fetch_array($answer_result_set)){
 					echo "<center><table class='ans'><tr><td>";
-						echo htmlentities($answer_found['answer'])."<td class='post_date'>Posted @ ".$answer_found['answer_post_date']."</td>";
-						echo "</td></tr></table></center>";
+						echo htmlentities("Ans..    ".$answer_found['answer'])."<td class='post_date'>Posted @ ".$answer_found['answer_post_date']."</td>";
+						echo "</td></tr></table></center><hr width='80%'></hr>";
 					}
 					
 				}
@@ -141,7 +136,7 @@ error_reporting(E_ALL & ~ E_NOTICE & ~ E_WARNING & ~E_DEPRECATED);
 		
 		}
 	}	
-echo("<div style='font-size:12px;'>Total ".$c_count." result found..</div>");
+echo("<div style='font-size:12px; color:red;'>Total ".$c_count." result found..</div>");
 ?>
 
 

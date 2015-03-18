@@ -18,12 +18,20 @@ $password = $_REQUEST['password'];
 $query = "SELECT * FROM `user` WHERE email='$email' and password='$password'";
  $result = mysql_query($query) or die(mysql_error());
 $count = mysql_num_rows($result);
+if($email!="" && $password!="")
+{
+
 if ($count == 1){
-echo "Sucess!!";
+echo "<h1 style='color:black;'>Sucess!!</h1>";
 }
 else
 {
-echo "<h1 style='color:white;'>Invalid Login Credentials.<br> Enter Correct Email and password.</h1>";
+echo "<h1 style='color:black;'>Invalid Login Credentials.<br> Enter Correct Email and password.</h1>";
+}
+}
+else
+{
+echo "<h1 style='color:red;'>Please Enter your email and password</h1>";
 }
 
 
